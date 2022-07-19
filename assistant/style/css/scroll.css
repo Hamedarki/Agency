@@ -1,0 +1,55 @@
+:root {
+  --dark: #333;
+  --highlight: #ff6666;
+  --light: #f6f6f6;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  width: 100vw;
+}
+body *,
+body *:before,
+body *:after {
+  box-sizing: border-box;
+}
+
+.scroll-toggle {
+  align-items: center;
+  background-color: var(--light);
+  border: 2px solid var(--dark);
+  display: flex;
+  max-width: 680px;
+  justify-content: center;
+  width: 100%;
+}
+.scroll-toggle__button {
+  appearance: none;
+  border: 2px solid var(--dark);
+  flex: 0 0 100px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.1s ease;
+}
+.scroll-toggle__button:active, .scroll-toggle__button:hover {
+  background-color: var(--highlight);
+}
+.scroll-toggle__button:focus {
+  outline: 2px solid var(--highlight);
+}
+.scroll-toggle__list {
+  border-left: 2px solid var(--dark);
+  border-right: 2px solid var(--dark);
+  display: flex;
+  flex: 1 1 auto;
+  overflow-x: scroll;
+}
+.scroll-toggle__list-item {
+  flex: 0 0 auto;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=scroll.css.map */
